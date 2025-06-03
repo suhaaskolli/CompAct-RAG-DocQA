@@ -1,0 +1,6 @@
+### Heading
+Some introductory line that will be ignored.
+
+Token <|reserved_special_token_250|>
+
+The capital of Spain is Madrid.
