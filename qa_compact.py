@@ -2,10 +2,10 @@
 qa_compact.py –– load FAISS + CompAct + local-Llama
 ---------------------------------------------------
 python qa_compact.py \
-    --q-emb emb_q.npy \
+    --question "What is ... ?" \
     --index-dir index \
     --model-path models/llama-3-8b-instruct.Q4_K_M.gguf \
-    --compact-model cwyoon99/CompAct-7b-awq
+    --compact-model models/compact7b/CompAct-7b.Q4_K_S.gguf
 """
 import argparse, pickle, json, os, numpy as np, faiss, sys, time, re
 from llama_cpp import Llama as _GGUF
