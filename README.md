@@ -1,6 +1,6 @@
 # Doc-QA + CompAct Pipeline
 
-A fast, modern, and robust document question-answering pipeline with optional context compaction, designed for Apple Silicon and quantized LLMs (GGUF format).
+A fast, modular, and robust document question-answering pipeline with context compaction, designed to run locally.
 
 ---
 
@@ -9,24 +9,23 @@ This project lets you:
 - Upload or index PDFs and text files
 - Build a FAISS index for fast retrieval
 - Ask questions and get answers from a local LLM (llama.cpp/llama-cpp-python)
-- **Compact** retrieved context with a summarizer LLM before answering
-- Run everything locally, optimized for Apple Silicon
+- **CompAct** retrieved context with a summarizer LLM before answering
 
 ---
 
 ## Features
-- **PDF & text support**
-- **Fast retrieval** with FAISS and sentence-transformers
-- **Quantized LLMs** (GGUF) for efficient inference
-- **Compaction**: Summarize context before answering for better results on long docs
-- **Flask web app**: Upload a PDF, ask multiple questions, choose compaction
-- **CLI scripts** for batch and automated use
+- **PDF & text ingestion** from local files
+- **Fast retrieval** via FAISS + sentence-transformers
+- **Quantized inference** using GGUF LLMs (optimized for Apple Silicon)
+- **Context compaction** with a summarizer LLM (CompAct)
+- **Web app interface** for interactive querying
+- **CLI utilities** for batch processing and automation
 
 ---
 
 ## About the CompAct Model
 
-**CompAct** is a specialized LLM trained to summarize and compress large retrieved contexts into concise, information-rich summaries. This helps the answer LLM focus on the most relevant information, especially for long or complex documents.
+**CompAct** is a specialized LLM trained to summarize and compress large retrieved contexts into concise, information-rich summaries. This helps the answering model focus on the most relevant information, especially for long or complex documents.
 
 - **When to use:**
   - Enable compaction for long PDFs, multi-document queries, or when you want more focused answers.
